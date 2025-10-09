@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Title: Products --></head>
+<body>
+    <!-- Nav -->
+    <section class="products py-5">
+        <div class="container">
+            <h1>Our Products</h1>
+            <div class="filters mb-4">
+                <select id="brandFilter"><option>All</option><option>Apple</option><option>Samsung</option><!-- More --></select>
+                <select id="priceFilter"><option>All Prices</option><option>Under $500</option><!-- More --></select>
+            </div>
+            <div class="row" id="productGrid">
+                <!-- 12+ cards like: -->
+                <div class="col-md-3"><div class="card"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/7f45a9225304453.Y3JvcCwxMDgwLDg0NCwwLDA.jpg" alt="Samsung S23"><div class="card-body"><h5>Samsung S23</h5><p>$699</p><button data-bs-toggle="modal" data-bs-target="#productModal">View Details</button></div></div></div>
+                <!-- Repeat for Huawei, Google Pixel, etc. with modals -->
+            </div>
+        </div>
+    </section>
+    <!-- Modal example -->
+    <div class="modal fade" id="productModal"><div class="modal-dialog"><div class="modal-content"><!-- Details --></div></div></div>
+    <!-- Footer, Scripts -->
+</body>
+</html>
