@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; }
+.hero { background: url('https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/686f6c96cc787d001d0843f6.jpg') center/cover; height: 400px; }
+.card { transition: transform 0.3s; }
+.card:hover { transform: scale(1.05); }
+/* More custom styles for filters, etc. */
