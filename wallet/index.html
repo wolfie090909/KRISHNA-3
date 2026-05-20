@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send money in a few taps. Demo wallet — no real funds, no jargon.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Atlas Wallet — Send (demo)</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#send-form">Skip to send money</a>
+  <div class="shell">
+    <header>
+      <h1>Send money</h1>
+      <p>One clear action. Demo only — balances are pretend.</p>
+    </header>
+
+    <section class="balance-card" aria-labelledby="bal-label">
+      <div id="bal-label" class="balance-label">Available balance</div>
+      <div id="balance" class="balance-value" aria-live="polite">—</div>
+    </section>
+
+    <form id="send-form" novalidate>
+      <label for="recipient">Send to</label>
+      <input id="recipient" name="recipient" type="text" autocomplete="username" required
+        placeholder="Phone, email, or name" inputmode="email" minlength="3" maxlength="120"
+        aria-describedby="recipient-hint">
+      <p id="recipient-hint" class="meta">We never show rails or codes to people sending money.</p>
+
+      <label for="amount">Amount</label>
+      <input id="amount" name="amount" type="text" inputmode="decimal" required
+        placeholder="0.00" aria-describedby="amount-hint" autocomplete="transaction-amount">
+      <p id="amount-hint" class="meta">Entered as a normal amount; stored as whole minor units only.</p>
+
+      <label for="currency">Currency</label>
+      <select id="currency" name="currency" aria-label="Currency">
+        <option value="USD" selected>US Dollar</option>
+        <option value="EUR">Euro</option>
+        <option value="GBP">British Pound</option>
+        <option value="AED">UAE Dirham</option>
+        <option value="JPY">Japanese Yen</option>
+      </select>
+
+      <button id="submit-send" class="primary" type="submit">Send now</button>
+    </form>
+
+    <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+
+    <section class="meta" aria-labelledby="idem-label">
+      <h2 id="idem-label" class="balance-label">Request idempotency key</h2>
+      <p>Every send gets a fresh key so a retry cannot double-send the same instruction.</p>
+      <p><code id="idempotency-key">—</code></p>
+    </section>
+  </div>
+
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
