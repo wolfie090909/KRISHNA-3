@@ -5,6 +5,8 @@
 **Currency:** AED  
 **Purpose:** Identify flaws, cross-foot errors, and IFRS presentation issues; propose **corrected figures** that reconcile across the primary statements.
 
+**Investor / management PDF (reconciled):** `docs/Krishna_Mobiles_FZCO_Statement_of_Financial_Position_31_Dec_2025_Investor.pdf` — regenerate with `python3 scripts/generate_krishna_investor_financials_pdf.py` (requires `reportlab`, see `requirements-financials.txt`).
+
 ---
 
 ## 1. Executive summary
