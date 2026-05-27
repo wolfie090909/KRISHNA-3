@@ -1,0 +1,3 @@
+# Optional: generate investor / management financial PDFs
+reportlab>=4.2,<5
+pypdf>=4.0,<6
